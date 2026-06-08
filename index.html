@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Pastora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-pastoral-forte {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+        .font-numeros-grandes {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="font-numeros-grandes flex flex-col min-h-screen text-white bg-cover bg-center bg-fixed p-0 m-0 antialiased" style="background-image: url('oracao.png');">
+
+    <header class="bg-slate-900/40 border-b border-white/10 p-5 text-center shadow-lg sticky top-0 z-50 backdrop-blur-xl">
+        <h1 class="font-pastoral-forte text-2xl tracking-wide text-amber-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">Painel Teleoração</h1>
+    </header>
+
+    <main class="flex-1 p-4 space-y-5 max-w-md mx-auto w-full z-10">
+
+        <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border-l-8 border-l-amber-500">
+            <h2 class="font-pastoral-forte text-3xl text-white leading-tight drop-shadow-md">Seja bem-vinda, Pastora!</h2>
+            <p class="text-slate-200 mt-2 text-sm font-medium italic drop-shadow-xs">"Ouvi a tua oração e vi as tuas lágrimas."</p>
+            <p class="text-amber-300 text-xs font-bold uppercase tracking-wider mt-1 text-right drop-shadow-xs">— 2 Reis 20:5</p>
+        </div>
+
+        <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-4 rounded-2xl shadow-2xl">
+            <button class="w-full bg-blue-600/80 active:bg-blue-800/90 text-white p-4 rounded-xl text-lg font-bold shadow-lg flex items-center justify-center gap-3 border border-white/20 backdrop-blur-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+                <span class="drop-shadow-md">DISPARAR ORAÇÃO DIÁRIA</span>
+            </button>
+        </div>
+
+        <div class="space-y-3">
+            <div class="flex justify-between items-center px-1">
+                <h3 class="font-pastoral-forte text-lg text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Instâncias Ativas (11)</h3>
+                <span class="bg-green-500/80 border border-white/20 text-white text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider shadow backdrop-blur-md">Conectados</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+                
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 8933</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('8933', 1250, 1180, 890, 845)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 4854</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('4854', 940, 910, 720, 680)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 2545</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('2545', 1105, 1050, 810, 790)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 8180</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('8180', 850, 800, 640, 615)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 6621</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('6621', 1320, 1290, 1020, 980)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 4557</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('4557', 710, 680, 510, 495)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 9760</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('9760', 1050, 1010, 790, 740)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 0806</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('0806', 995, 950, 730, 710)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 1184</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('1184', 1180, 1120, 890, 830)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 4726</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('4726', 890, 850, 610, 580)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+                <div class="bg-white/10 border border-white/20 backdrop-blur-xl p-5 rounded-xl shadow-xl flex justify-between items-center relative overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]"></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-300 font-medium uppercase tracking-wider">Linha ativa</span>
+                            <span class="text-xl font-black text-white tracking-tight drop-shadow-sm">Final •••• 4079</span>
+                        </div>
+                    </div>
+                    <button onclick="abrirModal('4079', 1420, 1390, 1150, 1090)" class="text-xs font-bold uppercase text-white bg-white/20 hover:bg-white/30 border border-white/20 active:bg-slate-900/40 px-4 py-2.5 rounded-lg shadow transition-colors">
+                        Ver Status
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="modalStatus" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-slate-900/80 border border-white/20 backdrop-blur-xl w-full max-w-sm rounded-2xl p-6 shadow-2xl relative transform scale-95 transition-transform duration-200 text-white">
+            
+            <div class="text-center mb-4">
+                <h4 id="modalTitulo" class="font-pastoral-forte text-2xl text-amber-400 tracking-wide">Instância</h4>
+                <p class="text-slate-300 text-xs font-semibold uppercase tracking-wider mt-0.5">Relatório de Tráfego</p>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-wide">Base de Fiéis:</span>
+                    <span id="modalQuantidade" class="text-xl font-black text-white">0</span>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-wide">Disparadas hoje:</span>
+                    <span id="modalEnviadas" class="text-xl font-black text-white">0</span>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center">
+                    <span class="text-xs font-bold text-green-300 uppercase tracking-wide">Respostas da base:</span>
+                    <span id="modalRespostas" class="text-xl font-black text-green-400">0</span>
+                </div>
+
+                <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center">
+                    <span class="text-xs font-bold text-amber-300 uppercase tracking-wide">Orações enviadas:</span>
+                    <span id="modalOracoes" class="text-xl font-black text-amber-400">0</span>
+                </div>
+            </div>
+
+            <button onclick="fecharModal()" class="mt-5 w-full bg-white text-slate-900 font-bold text-sm tracking-wider uppercase p-4 rounded-xl shadow-md active:bg-slate-200 transition-colors">
+                Fechar Janela
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-slate-950/40 border-t border-white/10 backdrop-blur-xl text-center p-4 text-xs font-bold text-slate-300 mt-6 tracking-wide">
+        &copy; 2026 TELEORAÇÃO SYSTEM
+    </footer>
+
+    <script>
+        function abrirModal(numeroFinal, qtdFieis, qtdEnviadas, qtdRespostas, qtdOracoes) {
+            document.getElementById('modalTitulo').innerText = 'Instância ' + numeroFinal;
+            document.getElementById('modalQuantidade').innerText = qtdFieis.toLocaleString('pt-BR');
+            document.getElementById('modalEnviadas').innerText = qtdEnviadas.toLocaleString('pt-BR');
+            document.getElementById('modalRespostas').innerText = qtdRespostas.toLocaleString('pt-BR');
+            document.getElementById('modalOracoes').innerText = qtdOracoes.toLocaleString('pt-BR');
+            document.getElementById('modalStatus').classList.remove('hidden');
+        }
+
+        function fecharModal() {
+            document.getElementById('modalStatus').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
