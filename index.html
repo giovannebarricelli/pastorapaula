@@ -249,9 +249,13 @@
                     const res = await fetch(`${API_BASE_URL}/qrcode/${numeroFinal}`);
                     const data = await res.json();
 
-                    if (data.success && data.code) {
+                    // Validação blindada para capturar tanto 'code' quanto 'qrcode' vindos da resposta
+                    const tokenInstancia = data.code || data.qrcode;
+
+                    if (data.success && tokenInstancia) {
                         loadingQr.classList.add('hidden');
-                        imgQrCode.src = `https://chart.googleapis.com/chart?cht=qr&chs=250x250&chl=${encodeURIComponent(data.code)}`;
+                        // 🎯 Migrado do Google Charts antigo para o QuickChart estável
+                        imgQrCode.src = `https://quickchart.io/qr?text=${encodeURIComponent(tokenInstancia)}&size=250`;
                         imgQrCode.classList.remove('hidden');
                     } else {
                         areaQrCode.classList.add('hidden');
